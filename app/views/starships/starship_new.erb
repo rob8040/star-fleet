@@ -1,0 +1,16 @@
+<h1>Add Ship Info</h1>
+
+<form action="/starships" method="post">
+  <label for="name">Ship name</label>
+  <input type="text" name="name" value="<%=@name%>">
+
+  <label for="ship_class">Ship Class</label>
+  <input type="text" name="ship_class" value="<%=@ship_class%>">
+
+  <label for="location">Ship Location</label>
+  <input type="text" name="location" value="<%=@location%>">
+
+  <input type="submit" />
+</form>
+
+<a class="back" href="/starships">Back to All Ships</a>

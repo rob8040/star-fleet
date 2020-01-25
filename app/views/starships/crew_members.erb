@@ -1,0 +1,13 @@
+<h1>Crew Members</h1>
+
+<ul>
+  <% if @crew_members %>
+    <% @crew_members.each do |member| %>
+      <li>
+          <h4><%= member.first_name %> <%= member.last_name %></h4>
+      </li>
+      <p>Specialty division: <%=member.specialty_division%></p>
+      <p>Ship assigned to: <%=member.ship.name%></p>
+    <% end %>
+  <% end %>
+</ul>

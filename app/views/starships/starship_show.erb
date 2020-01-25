@@ -1,0 +1,26 @@
+<h1>Ship Info</h1>
+
+<h2><%= @starship.name %></h2>
+<p><%= @starship.ship_class %></p>
+<p><%= @starship.location %></p>
+
+<h1>Add Crew Member</h1>
+
+<form action="/crew_members" method="post">
+
+  <input type="hidden" name="ship_id" value="<%=@starship.id%>">
+
+  <label for="first_name">First Name</label>
+  <input type="text" name="first_name" value="<%=@first_name%>">
+
+  <label for="last_name">Last Name</label>
+  <input type="text" name="last_name" value="<%=@last_name%>">
+
+  <label for="specialty_division">Specialty Division</label>
+  <input type="text" name="specialty_division" value="<%=@specialty_division%>">
+
+  <input type="submit">
+</form>
+
+<a href="/">Back to All Ships</a><br>
+<a href="/starships/new">Add a New Ship</a>
